@@ -88,27 +88,27 @@ def insert_tweet(connection,tweet):
     This function is only partially implemented.
     You'll need to add appropriate SQL insert statements to get it to work.
     '''
-
-    # skip tweet if it's already inserted
-    sql=sqlalchemy.sql.text('''
-    SELECT id_tweets 
-    FROM tweets
-    WHERE id_tweets = :id_tweets
-    ''')
-    res = connection.execute(sql,{
+    with connection.begin() as trans:
+    	# skip tweet if it's already inserted
+    	sql=sqlalchemy.sql.text('''
+    	SELECT id_tweets 
+    	FROM tweets
+    	WHERE id_tweets = :id_tweets
+    	''')
+    	res = connection.execute(sql,{
         'id_tweets':tweet['id'],
         })
-    if res.first() is not None:
-        return
+    	if res.first() is not None:
+	   return
 
     
     ########################################
     # insert into the users table
     ########################################
-    if tweet['user']['url'] is None:
-	user_id_urls = None
-    else:
-	user_id_urls = get_id_urls(tweet['user']['url'], connection)
+    	if tweet['user']['url'] is None:
+	   user_id_urls = None
+    	else:
+	   user_id_urls = get_id_urls(tweet['user']['url'], connection)
 
         # create/update the user
         sql = sqlalchemy.sql.text('''
