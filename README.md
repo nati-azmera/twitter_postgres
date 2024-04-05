@@ -13,7 +13,6 @@ In this first assignment, we will focus on:
 1. understanding JSON/denormalized vs normalized schemas (i.e. NoSQL vs SQL)
 
 ## Tasks
-
 1. Getting started:
 
     1. Fork this repo
