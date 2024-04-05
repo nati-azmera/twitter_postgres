@@ -1,7 +1,6 @@
 # Twitter in Postgres
-[![](https://github.com/nati_azmera/twitter_postgres/workflows/tests_denormalized/badge.svg)](https://github.com/natiazmera/twitter_postgres/actions?query=workflow%3Atests)
+[![](https://github.com/nati_azmera/twitter_postgres/workflows/tests_denormalized/badge.svg)](https://github.com/nati_azmera/twitter_postgres/actions?query=workflow%3Atests)
 [![](https://github.com/nati_azmera/twitter_postgres/workflows/tests_normalized/badge.svg)](https://github.com/nati_azmera/twitter_postgres/actions?query=workflow%3Atests)
-<<<<<<< HEAD
 
 =======
 >>>>>>> dd197cf (updated)
