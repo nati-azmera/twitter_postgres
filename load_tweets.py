@@ -120,7 +120,7 @@ def insert_tweet(connection,tweet):
 
     ''')
 
-	connection.execute(sql, {
+	res = connection.execute(sql, {
             'id_users': tweet['user']['id'],
             'created_at': tweet['user']['created_at'],
             'screen_name': remove_nulls(tweet['user']['screen_name']),
@@ -275,7 +275,7 @@ def insert_tweet(connection,tweet):
 		insert into users (id_users)
                 values (:id_users)
                 on conflict do nothing                
-''')
+		''')
 
 	    res = connection.execute(sql, {
                 'id_users':mention['id']
@@ -288,9 +288,9 @@ def insert_tweet(connection,tweet):
                ON CONFLICT DO NOTHING ''')
 
 	    res = connection.execute(sql, {
-                'id_users': mention['id'],
-                'id_tweets': tweet['id'] }
-                )
+                'id_tweets':tweet['id'],
+		'id_users':mention['id']
+ 		})
 
         ########################################
         # insert into the tweet_tags table
