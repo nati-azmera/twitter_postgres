@@ -2,8 +2,7 @@
 [![](https://github.com/nati_azmera/twitter_postgres/workflows/tests_denormalized/badge.svg)](https://github.com/nati_azmera/twitter_postgres/actions?query=workflow%3Atests)
 [![](https://github.com/nati_azmera/twitter_postgres/workflows/tests_normalized/badge.svg)](https://github.com/nati_azmera/twitter_postgres/actions?query=workflow%3Atests)
 
-=======
->>>>>>> dd197cf (updated)
+
 You will repeat the Twitter/MapReduce assignment using Postgres.
 Because this assignment will involve many new programming concepts,
 it will be spread out over several assignments.
